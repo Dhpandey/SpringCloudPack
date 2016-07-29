@@ -21,6 +21,7 @@ Guide to begin with spring cloud stream,task and dataflow
 
  Source and sink uses kafka queue to produce and consume data , both of them should be launched(run) to run these applications .
 
+Use mvn spring-boot:run or java -jar exec.jar to execute source and sink as different process
 
 ->  stream application can be register on SCDF as spring boot application using maven coordinates
   

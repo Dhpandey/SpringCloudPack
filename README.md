@@ -34,7 +34,7 @@ Use mvn spring-boot:run or java -jar exec.jar to execute source and sink as diff
   
   dataflow:>app register --name mysource --type source --uri maven://com.streamdemo:Streamdemo:0.0.1-SNAPSHOT
 
-  (Maven Coordinates should follow  maven://<groupId>:<artifactId>:<version>)
+  (Maven Coordinates should follow " maven://<groupId>:<artifactId>:<version> " )
 
   Reference : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.0.RELEASE/reference/htmlsingle/#spring-cloud-dataflow-register-apps
 

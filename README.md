@@ -32,7 +32,7 @@ Guide to begin with spring cloud stream,task and dataflow
 
   (Maven Coordinates should follow  maven://<groupId>:<artifactId>:<version>)
 
-  see: http://docs.spring.io/spring-cloud-dataflow/docs/1.0.0.RELEASE/reference/htmlsingle/#spring-cloud-dataflow-register-apps
+  Reference : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.0.RELEASE/reference/htmlsingle/#spring-cloud-dataflow-register-apps
 
   # Spring cloud Task:
 
@@ -41,7 +41,7 @@ Guide to begin with spring cloud stream,task and dataflow
   All we need to do is , follow spring boot datasource conventions and create database named spring_cloud_task, spring cloud task will automatically find database and create tables, further it will log various things inside it. 
   If non of datasource is configured ,it will create normal java map,which could not be preserved after the process isntance is stopped.
 
-  see : http://docs.spring.io/spring-cloud-task/1.0.0.M1/reference/htmlsingle/#getting-started
+  Reference : http://docs.spring.io/spring-cloud-task/1.0.0.M1/reference/htmlsingle/#getting-started
 
 # Spring Cloud Dataflow (SCDF)
 
@@ -87,7 +87,7 @@ dataflow:>stream deploy httpstream
 
 both UI ans Shell approach can be done only when SCDF local server , zookeeper server, kafka server are running 
 
- see : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.1.BUILD-SNAPSHOT/reference/html/getting-started.html
+ Reference : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.1.BUILD-SNAPSHOT/reference/html/getting-started.html
 
 
   To visualize things, i suggest : https://vimeo.com/172808512

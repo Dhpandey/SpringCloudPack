@@ -67,7 +67,7 @@ Spring cloud dataflow server local :
 
 java -jar target/spring-cloud-dataflow-server-local-1.0.1.BUILD-SNAPSHOT.jar
 
-#Spring cloud dataflow shell :
+Spring cloud dataflow shell :
 
 java -jar target/spring-cloud-dataflow-shell-1.0.1.BUILD-SNAPSHOT.jar
 

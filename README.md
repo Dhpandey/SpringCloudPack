@@ -14,8 +14,11 @@ Guide to begin with spring cloud stream,task and dataflow
  
  3. Spring Cloud Dataflow (SCDF)
 
+Note: All the demos uses kafka , however its not mandatory 
 
 # Spring Cloud Stream:
+ 
+ Start Kafka and zookeeper instances before running stream apps
 
 ->  Create source , processors for transformation function and sink using spring boot application and run them.
 

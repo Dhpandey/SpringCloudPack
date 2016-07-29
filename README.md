@@ -4,15 +4,15 @@ Guide to begin with spring cloud stream,task and dataflow
 
 #Includes :
 
- Spring Cloud Stream
+ 1. Spring Cloud Stream
    
      -> Source Stream
    
      -> Sink Stream
      
- Spring CLoud Task
+ 2. Spring CLoud Task
  
- Spring Cloud Dataflow (SCDF)
+ 3. Spring Cloud Dataflow (SCDF)
 
 
 # Spring Cloud Stream:

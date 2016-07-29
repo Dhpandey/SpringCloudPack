@@ -38,7 +38,7 @@ Use mvn spring-boot:run or java -jar exec.jar to execute source and sink as diff
 
   Reference : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.0.RELEASE/reference/htmlsingle/#spring-cloud-dataflow-register-apps
 
-  # Spring cloud Task:
+# Spring cloud Task:
 
   Cloud task in above solution(code) , uses mysql as datasource. 
   

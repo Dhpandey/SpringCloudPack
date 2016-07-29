@@ -1,4 +1,6 @@
-# SpringCloudPack
+# SpringCloudPack 
+
+Guide to begin with spring cloud stream,task and dataflow
 
 #Includes :
 
@@ -13,8 +15,37 @@
  Spring Cloud Dataflow (SCDF)
 
 
+# Spring Cloud Stream:
 
-#Requirements:
+->  Create source , processors for transformation function and sink using spring boot application and run them.
+
+ Source and sink uses kafka queue to produce and consume data , both of them should be launched(run) to run these applications .
+
+
+->  stream application can be register on SCDF as spring boot application using maven coordinates
+  
+  For above StreamSourceDemo(code), 
+  
+  -> this app can be registered using 
+  
+  dataflow:>app register --name mysource --type source --uri maven://com.streamdemo:Streamdemo:0.0.1-SNAPSHOT
+
+  (Maven Coordinates should follow  maven://<groupId>:<artifactId>:<version>)
+
+  see: http://docs.spring.io/spring-cloud-dataflow/docs/1.0.0.RELEASE/reference/htmlsingle/#spring-cloud-dataflow-register-apps
+
+  # Spring cloud Task:
+
+  Cloud task in above solution(code) , uses mysql as datasource. 
+  
+  All we need to do is , follow spring boot datasource conventions and create database named spring_cloud_task, spring cloud task will automatically find database and create tables, further it will log various things inside it. 
+  If non of datasource is configured ,it will create normal java map,which could not be preserved after the process isntance is stopped.
+
+  see : http://docs.spring.io/spring-cloud-task/1.0.0.M1/reference/htmlsingle/#getting-started
+
+# Spring Cloud Dataflow (SCDF)
+
+Requirements:
 
 -> Zookeeper
 
@@ -25,7 +56,6 @@
  Download :Spring cloud dataflow  
  
  https://github.com/spring-cloud/spring-cloud-dataflow
-
 
 maven buid 
 
@@ -57,37 +87,10 @@ dataflow:>stream deploy httpstream
 
 both UI ans Shell approach can be done only when SCDF local server , zookeeper server, kafka server are running 
 
+ see : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.1.BUILD-SNAPSHOT/reference/html/getting-started.html
 
-#Spring Cloud Stream:
-
-->  Create source , processors for transformation function and sink using spring boot application and run them.
-
- Source and sink uses kafka queue to produce and consume data , both of them should be launched(run) to run these applications .
-
-
-->  stream application can be register on SCDF as spring boot application using maven coordinates
-  
-  For above StreamSourceDemo(code), 
-  
-  -> this app can be registered using 
-  
-  dataflow:>app register --name mysource --type source --uri maven://com.streamdemo:Streamdemo:0.0.1-SNAPSHOT
-
-  (Maven Coordinates should follow  maven://<groupId>:<artifactId>:<version>)
-
-  see: http://docs.spring.io/spring-cloud-dataflow/docs/1.0.0.RELEASE/reference/htmlsingle/#spring-cloud-dataflow-register-apps
-
-  #Spring cloud Task:
-
-  Cloud task in above solution(code) , uses mysql as datasource. 
-  
-  All we need to do is , follow spring boot datasource conventions and create database named spring_cloud_task, spring cloud task will automatically find database and create tables, further it will log various things inside it. 
-  If non of datasource is configured ,it will create normal java map,which could not be preserved after the process isntance is stopped.
-
-  see : http://docs.spring.io/spring-cloud-task/1.0.0.M1/reference/htmlsingle/#getting-started
 
   To visualize things, i suggest : https://vimeo.com/172808512
-
 
 
 

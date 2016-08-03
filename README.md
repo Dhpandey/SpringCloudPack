@@ -71,7 +71,7 @@ maven build
 
  > java -jar target/spring-cloud-dataflow-shell-1.0.1.BUILD-SNAPSHOT.jar
 
-    # App registeration and Stream creation
+    #App registeration and creating stream
     
   -> DEMO SOURCE REGISTRATION(Http source)
 

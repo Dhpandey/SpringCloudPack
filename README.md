@@ -26,7 +26,7 @@ Note:Each demo uses kafka queue for streaming , its not mandatory though
 
 Use mvn spring-boot:run or java -jar exec.jar to execute source and sink as different process
 
-->  stream application can be register on SCDF as spring boot application using maven coordinates
+->  stream application can be registered on SCDF as spring boot application using maven coordinates
   
   For above StreamSourceDemo(code), 
   
@@ -34,7 +34,7 @@ Use mvn spring-boot:run or java -jar exec.jar to execute source and sink as diff
   
   dataflow:>app register --name mysource --type source --uri maven://com.streamdemo:Streamdemo:0.0.1-SNAPSHOT
 
-  (Maven Coordinates should follow  maven:// groupId : artifactId : version )
+  (Maven Coordinates should follow given rule  maven:// groupId : artifactId : version )
 
   Reference : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.0.RELEASE/reference/htmlsingle/#spring-cloud-dataflow-register-apps
 
@@ -42,7 +42,7 @@ Use mvn spring-boot:run or java -jar exec.jar to execute source and sink as diff
 
   Cloud task in above solution(code) , uses mysql as datasource. 
   
-  All we need to do is , follow spring boot datasource conventions and create database named spring_cloud_task, spring cloud task will automatically find database and create tables, further it will log various things inside it. 
+ Follow spring boot datasource conventions and create database named spring_cloud_task, then spring cloud task will automatically find database and create tables, further it will log various things inside it. 
   If non of datasource is configured ,it will create normal java map,which could not be preserved after the process isntance is stopped.
 
   Reference : http://docs.spring.io/spring-cloud-task/1.0.0.M1/reference/htmlsingle/#getting-started
@@ -61,15 +61,15 @@ Requirements:
  
  https://github.com/spring-cloud/spring-cloud-dataflow
 
-maven buid 
+maven build 
 
-Spring cloud dataflow server local :
+- Spring cloud dataflow server local :
 
-java -jar target/spring-cloud-dataflow-server-local-1.0.1.BUILD-SNAPSHOT.jar
+ > java -jar target/spring-cloud-dataflow-server-local-1.0.1.BUILD-SNAPSHOT.jar
 
-Spring cloud dataflow shell :
+- Spring cloud dataflow shell :
 
-java -jar target/spring-cloud-dataflow-shell-1.0.1.BUILD-SNAPSHOT.jar
+> java -jar target/spring-cloud-dataflow-shell-1.0.1.BUILD-SNAPSHOT.jar
 
   -> DEMO SOURCE REGISTRATION(Http source)
 
@@ -91,10 +91,9 @@ dataflow:>stream deploy httpstream
 
 both UI ans Shell approach can be done only when SCDF local server , zookeeper server, kafka server are running 
 
- Reference : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.1.BUILD-SNAPSHOT/reference/html/getting-started.html
+Reference : http://docs.spring.io/spring-cloud-dataflow/docs/1.0.1.BUILD-SNAPSHOT/reference/html/getting-started.html
 
-
-  To visualize things, i suggest : https://vimeo.com/172808512
+  To visualize before beginning, i suggest : https://vimeo.com/172808512
 
 
 

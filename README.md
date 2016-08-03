@@ -10,11 +10,11 @@ Guide to begin with spring cloud stream,task and dataflow
    
      -> Sink Stream
      
- 2. Spring CLoud Task
+ 2. Spring Cloud Task
  
  3. Spring Cloud Dataflow (SCDF)
 
-Note: All the demos uses kafka , however its not mandatory 
+Note:Each demo uses kafka queue for streaming , its not mandatory though
 
 # Spring Cloud Stream:
  

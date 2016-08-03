@@ -69,23 +69,25 @@ maven build
 
 - Spring cloud dataflow shell :
 
-> java -jar target/spring-cloud-dataflow-shell-1.0.1.BUILD-SNAPSHOT.jar
+ > java -jar target/spring-cloud-dataflow-shell-1.0.1.BUILD-SNAPSHOT.jar
 
+    # App registeration and Stream creation
+    
   -> DEMO SOURCE REGISTRATION(Http source)
 
-dataflow:>app register --name httpinput --type source --uri maven://org.springframework.cloud.stream.app:http-source-kafka:1.0.0.BUILD-SNAPSHOT
+ > dataflow:>app register --name httpinput --type source --uri maven://org.springframework.cloud.stream.app:http-source-kafka:1.0.0.BUILD-SNAPSHOT
 
   -> DEMO SINK RESGISTRATION(file Sink)
 
-dataflow:>app register --name file --type sink --uri maven://org.springframework.cloud.stream.app:file-sink-kafka:1.0.0.BUILD-SNAPSHOT
+ > dataflow:>app register --name file --type sink --uri maven://org.springframework.cloud.stream.app:file-sink-kafka:1.0.0.BUILD-SNAPSHOT
 
   -> Create Stream
 
-dataflow:>stream create httpstream --definition "httpinput --server.port=8085 | file --directory=/opt/final"
+ > dataflow:>stream create httpstream --definition "httpinput --server.port=8085 | file --directory=/opt/final"
 
   -> Deploye stream
 
-dataflow:>stream deploy httpstream
+ > dataflow:>stream deploy httpstream
 
 (all this can be done using SCDF UI http://ip:9393/dashboard/index.html#/apps/apps) 
 
